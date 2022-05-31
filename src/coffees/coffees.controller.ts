@@ -28,13 +28,13 @@ export class CoffeesController {
   }
 
   @Post()
-  create(@Body() CreateCoffeeDto: CreateCoffeeDto) {
-    return this.coffesService.create(CreateCoffeeDto);
+  create(@Body() createCoffeeDto: CreateCoffeeDto) {
+    return this.coffesService.create(createCoffeeDto);
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() UpdateCoffeeDto: UpdateCoffeeDto) {
-    return this.coffesService.update(id, UpdateCoffeeDto);
+  update(@Param('id') id: string, @Body() updateCoffeeDto: UpdateCoffeeDto) {
+    return this.coffesService.update(id, updateCoffeeDto);
   }
 
   @Delete(':id')
